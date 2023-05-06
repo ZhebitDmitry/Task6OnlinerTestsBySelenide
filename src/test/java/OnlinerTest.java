@@ -3,7 +3,6 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.List;
 
 public class OnlinerTest extends BaseTest {
 
@@ -27,8 +26,9 @@ public class OnlinerTest extends BaseTest {
                 .shouldBe(Condition.visible)
                 .isDisplayed());
     }
+
     @Test
-    public void testComputerComponentsHaveDescriptionAndPrice(){
+    public void testComputerComponentsHaveDescriptionAndPrice() {
         CatalogPage catalogPageWithComputersAndComponents = new MainPage(BASE_URL)
                 .clickOnCatalog()
                 .clickOnCatalogSectionComputersAndNetworksSection()
@@ -47,7 +47,26 @@ public class OnlinerTest extends BaseTest {
         int computerComponentsSize = catalogPageWithComputersAndComponents.getComputerComponents().size();
         System.out.println(computerComponentsSize);
 
-        Assert.assertTrue(computerComponentsSize==descriptionOfComponentsSize);
-        Assert.assertTrue(computerComponentsSize==titlesOfComponentsSize);
+        Assert.assertTrue(computerComponentsSize == descriptionOfComponentsSize);
+        Assert.assertTrue(computerComponentsSize == titlesOfComponentsSize);
+    }
+
+    @Test
+    public void testMobilePhone() {
+        ProductsPage mobilePhonesPage = new MainPage(BASE_URL).clickOnMobilePhones();
+        mobilePhonesPage.getProductsList().shouldBe(Condition.visible);
+        int productSectionQuantity = mobilePhonesPage.getProductSection().size();
+        int titlesQuantity = mobilePhonesPage.getTitlesOfProducts().size();
+        int descriptionQuantity = mobilePhonesPage.getDescriptionOfProducts().size();
+        int ratingQuantity = mobilePhonesPage.getRatingOfProducts().size();
+        int priceQuantity = mobilePhonesPage.getPricesOfProducts().size();
+        int imageQuantity = mobilePhonesPage.getProductPictures().size();
+        int checkBoxQuantity = mobilePhonesPage.getProductCheckBox().size();
+        Assert.assertTrue(productSectionQuantity == titlesQuantity);
+        Assert.assertTrue(titlesQuantity == descriptionQuantity);
+        Assert.assertTrue(descriptionQuantity == ratingQuantity);
+        Assert.assertTrue(ratingQuantity == priceQuantity);
+        Assert.assertTrue(priceQuantity == imageQuantity);
+        Assert.assertTrue(imageQuantity == checkBoxQuantity);
     }
 }

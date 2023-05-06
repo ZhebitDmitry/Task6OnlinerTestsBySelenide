@@ -17,16 +17,22 @@ public class CatalogPage {
     private final SelenideElement verticalListOfComputersAndNetworks =
             $x("//div[@data-id='2']//div[@class='catalog-navigation-list__aside-list']");
     private final SelenideElement computerComponentSection = $x("//div[text()=\" Комплектующие \"]");
+    private final SelenideElement electronicsSection = $x("//span[contains(text(), 'Электроника')]");
+    private final SelenideElement mobilePhones = $x("//div[contains(text(), 'Мобильные телефоны')]");
+
     public ElementsCollection getCatalogSections() {
         return catalogSections;
     }
-    public ElementsCollection getComputerComponents(){
+
+    public ElementsCollection getComputerComponents() {
         return computerComponents;
     }
-    public ElementsCollection getTitlesOfComponents(){
+
+    public ElementsCollection getTitlesOfComponents() {
         return titlesOfComponents;
     }
-    public ElementsCollection getDescriptionOfComponents(){
+
+    public ElementsCollection getDescriptionOfComponents() {
         return descriptionOfComponents;
     }
 
@@ -38,9 +44,20 @@ public class CatalogPage {
         computersAndNetworksSection.click();
         return new CatalogPage();
     }
-    public CatalogPage clickOnComputerComponentSection(){
+
+    public CatalogPage clickOnComputerComponentSection() {
         computerComponentSection.click();
         return new CatalogPage();
+    }
+
+    public CatalogPage clickOnElectronics() {
+        electronicsSection.click();
+        return new CatalogPage();
+    }
+
+    public ProductsPage clickOnMobilePhones() {
+        mobilePhones.click();
+        return new ProductsPage();
     }
 
 }
