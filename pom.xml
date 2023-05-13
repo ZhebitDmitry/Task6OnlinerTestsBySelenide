@@ -15,7 +15,7 @@
         <log4j.version>2.20.0</log4j.version>
         <aspectj.version>1.9.19</aspectj.version>
         <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
-        <allure-junit4.version>2.6.0</allure-junit4.version>
+        <allure-junit4.version>2.13.6</allure-junit4.version>
         <allure.version>2.21.0</allure.version>
     </properties>
 
@@ -32,8 +32,11 @@
                 </configuration>
             </plugin>
 
-
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.20</version>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -60,6 +63,8 @@
                 </dependencies>
             </plugin>
 
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -74,7 +79,23 @@
         </plugins>
     </build>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.20</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <version>2.20</version>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.commons</groupId>
