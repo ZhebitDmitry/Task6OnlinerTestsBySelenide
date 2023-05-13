@@ -1,3 +1,6 @@
+import Pages.CatalogPage;
+import Pages.MainPage;
+import Pages.ProductsPage;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.Assert;
@@ -19,12 +22,11 @@ public class OnlinerTest extends BaseTest {
 
     @Test
     public void testCheckVerticalsListOfComputersAndNetworksTest() {
-        Assert.assertTrue(new MainPage(BASE_URL)
+        new MainPage(BASE_URL)
                 .clickOnCatalog()
                 .clickOnCatalogSectionComputersAndNetworksSection()
                 .getVerticalListOfComputersAndNetworks()
-                .shouldBe(Condition.visible)
-                .isDisplayed());
+                .shouldBe(Condition.visible);
     }
 
     @Test
@@ -37,15 +39,12 @@ public class OnlinerTest extends BaseTest {
         int descriptionOfComponentsSize = catalogPageWithComputersAndComponents
                 .getDescriptionOfComponents()
                 .size();
-        System.out.println(descriptionOfComponentsSize);
 
         int titlesOfComponentsSize = catalogPageWithComputersAndComponents
                 .getTitlesOfComponents()
                 .size();
-        System.out.println(titlesOfComponentsSize);
 
         int computerComponentsSize = catalogPageWithComputersAndComponents.getComputerComponents().size();
-        System.out.println(computerComponentsSize);
 
         Assert.assertTrue(computerComponentsSize == descriptionOfComponentsSize);
         Assert.assertTrue(computerComponentsSize == titlesOfComponentsSize);
