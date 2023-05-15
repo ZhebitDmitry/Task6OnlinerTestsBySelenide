@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.it_academy.test.onliner.OnlinerTest" time="16.367" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.it_academy.test.onliner.OnlinerTest" time="17.494" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -66,8 +66,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="testMobilePhone" classname="com.it_academy.test.onliner.OnlinerTest" time="7.71"/>
-  <testcase name="testCheckVerticalsListOfComputersAndNetworksTest" classname="com.it_academy.test.onliner.OnlinerTest" time="2.451"/>
-  <testcase name="testCheckSectionsOfCatalogIsExistsTest" classname="com.it_academy.test.onliner.OnlinerTest" time="1.892"/>
-  <testcase name="testComputerComponentsHaveDescriptionAndPrice" classname="com.it_academy.test.onliner.OnlinerTest" time="2.058"/>
+  <testcase name="testMobilePhone" classname="com.it_academy.test.onliner.OnlinerTest" time="8.541"/>
+  <testcase name="testCheckVerticalsListOfComputersAndNetworksTest" classname="com.it_academy.test.onliner.OnlinerTest" time="2.468"/>
+  <testcase name="testCheckSectionsOfCatalogIsExistsTest" classname="com.it_academy.test.onliner.OnlinerTest" time="1.944"/>
+  <testcase name="testComputerComponentsHaveDescriptionAndPrice" classname="com.it_academy.test.onliner.OnlinerTest" time="2.169"/>
 </testsuite>
