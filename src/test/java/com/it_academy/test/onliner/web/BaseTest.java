@@ -1,4 +1,4 @@
-package com.it_academy.test;
+package com.it_academy.test.onliner.web;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -19,7 +19,6 @@ abstract public class BaseTest {
         Configuration.driverManagerEnabled = true;
         Configuration.browserSize = "1920x1080";
         Configuration.headless = false;
-
     }
 
     @BeforeClass

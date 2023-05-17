@@ -1,17 +1,19 @@
-package com.it_academy.test.onliner;
+package com.it_academy.test.onliner.web;
 
-import com.it_academy.onliner.api.Product;
+import com.google.common.collect.ImmutableMap;
+import com.it_academy.onliner.rest_api.models.Product;
 import com.it_academy.onliner.pageobject.onliner.CatalogPage;
 import com.it_academy.onliner.pageobject.onliner.MainPage;
 import com.it_academy.onliner.pageobject.onliner.ProductsPage;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import com.it_academy.test.BaseTest;
 import io.restassured.http.ContentType;
+import io.restassured.response.ResponseBody;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
@@ -78,14 +80,29 @@ public class OnlinerTest extends BaseTest {
         Assert.assertTrue(priceQuantity == imageQuantity);
         Assert.assertTrue(imageQuantity == checkBoxQuantity);
     }
+    @Test
+    public void testRest(){
+        List<Product> productList = given()
+                .when()
+                .contentType(ContentType.JSON)
+                .get(URL)
+                .then().log().all()
+                .extract().body().jsonPath().getList("products", Product.class);
+        System.out.println(productList);
+    }
+
 //    @Test
-//    public void testRest(){
-//        List<Product> productList = given()
+//    public void testSushiRequest(){
+//        ResponseBody responseBody = given()
+//                .headers(configureHeaders())
 //                .when()
-//                .contentType(ContentType.JSON)
 //                .get(URL)
-//                .then().log().all()
-//                .extract().body().jsonPath().getList("products", Product.class);
-//        System.out.println(productList);
+//                .then()
+//                .statusCode(200)
+//                .extract()
+//                .response()
+//                .getBody();
+//        System.out.println(responseBody.asString());
 //    }
+
 }
