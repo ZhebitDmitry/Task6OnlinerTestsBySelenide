@@ -1,6 +1,5 @@
 package com.it_academy.onliner.rest_api.models;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

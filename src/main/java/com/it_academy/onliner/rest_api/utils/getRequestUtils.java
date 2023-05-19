@@ -9,14 +9,14 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public final class getRequestUtils {
-    private getRequestUtils(){
+    private getRequestUtils() {
     }
 
     public static ResponseBody makeGetRequestAndGetResponseBody(String endpoint, Map<String, Object> headers,
-                                                                Map<String, Object> params){
-       return given()
+                                                                Map<String, Object> params) {
+        return given()
                 .headers(MapUtils.emptyIfNull(headers))
-               .params(MapUtils.emptyIfNull(params))
+                .params(MapUtils.emptyIfNull(params))
                 .when()
                 .get(endpoint)
                 .then()
@@ -25,5 +25,4 @@ public final class getRequestUtils {
                 .response()
                 .getBody();
     }
-
 }
