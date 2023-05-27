@@ -5,9 +5,10 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.BeforeAll;
+//import org.junit.After;
+//import org.junit.Before;
+//import org.junit.BeforeClass;
 
 abstract public class BaseTest {
 
@@ -21,7 +22,8 @@ abstract public class BaseTest {
         Configuration.headless = false;
     }
 
-    @BeforeClass
+//    @BeforeClass
+    @BeforeAll
     public static void init() {
         setUp();
     }

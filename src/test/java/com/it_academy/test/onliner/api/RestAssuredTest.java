@@ -3,11 +3,12 @@ package com.it_academy.test.onliner.api;
 import com.it_academy.onliner.rest_api.models.Product;
 import com.it_academy.onliner.rest_api.service.SushiService;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RestAssuredTest {
     @Test
