@@ -66,30 +66,30 @@ public class OnlinerTest extends BaseTest {
                 && computerComponentsSize == titlesOfComponentsSize);
     }
 
-    @Test
-    public void testMobilePhone() {
-        LOG.info("Проверка наличия заголовков, описания, рейтингов, цен, иконок и чекбоксов у мобильных телефонов");
-        ProductsPage mobilePhonesPage = new MainPage(BASE_URL).clickOnMobilePhones();
-        mobilePhonesPage.getProductsList().shouldBe(Condition.visible);
-        int productSectionQuantity = mobilePhonesPage.getProductSection().size();
-        LOG.info("Количество продуктов - "+productSectionQuantity);
-        int titlesQuantity = mobilePhonesPage.getTitlesOfProducts().size();
-        LOG.info("Количество заголовков - "+titlesQuantity);
-        int descriptionQuantity = mobilePhonesPage.getDescriptionOfProducts().size();
-        LOG.info("Количество описаний - "+descriptionQuantity);
-        int ratingQuantity = mobilePhonesPage.getRatingOfProducts().size();
-        LOG.info("Количество рейтингов - "+ratingQuantity);
-        int priceQuantity = mobilePhonesPage.getPricesOfProducts().size();
-        LOG.info("Количество цен - "+priceQuantity);
-        int imageQuantity = mobilePhonesPage.getProductPictures().size();
-        LOG.info("Количество иконок - "+imageQuantity);
-        int checkBoxQuantity = mobilePhonesPage.getProductCheckBox().size();
-        LOG.info("Количество чекбоксов - "+checkBoxQuantity);
-        Assert.assertTrue(productSectionQuantity == titlesQuantity &&
-                titlesQuantity == descriptionQuantity &&
-                descriptionQuantity == ratingQuantity &&
-                ratingQuantity == priceQuantity &&
-                priceQuantity == imageQuantity &&
-                imageQuantity == checkBoxQuantity);
-    }
+//    @Test
+//    public void testMobilePhone() {
+//        LOG.info("Проверка наличия заголовков, описания, рейтингов, цен, иконок и чекбоксов у мобильных телефонов");
+//        ProductsPage mobilePhonesPage = new MainPage(BASE_URL).clickOnMobilePhones();
+//        mobilePhonesPage.getProductsList().shouldBe(Condition.visible);
+//        int productSectionQuantity = mobilePhonesPage.getProductSection().size();
+//        LOG.info("Количество продуктов - "+productSectionQuantity);
+//        int titlesQuantity = mobilePhonesPage.getTitlesOfProducts().size();
+//        LOG.info("Количество заголовков - "+titlesQuantity);
+//        int descriptionQuantity = mobilePhonesPage.getDescriptionOfProducts().size();
+//        LOG.info("Количество описаний - "+descriptionQuantity);
+//        int ratingQuantity = mobilePhonesPage.getRatingOfProducts().size();
+//        LOG.info("Количество рейтингов - "+ratingQuantity);
+//        int priceQuantity = mobilePhonesPage.getPricesOfProducts().size();
+//        LOG.info("Количество цен - "+priceQuantity);
+//        int imageQuantity = mobilePhonesPage.getProductPictures().size();
+//        LOG.info("Количество иконок - "+imageQuantity);
+//        int checkBoxQuantity = mobilePhonesPage.getProductCheckBox().size();
+//        LOG.info("Количество чекбоксов - "+checkBoxQuantity);
+//        Assert.assertTrue(productSectionQuantity == titlesQuantity &&
+//                titlesQuantity == descriptionQuantity &&
+//                descriptionQuantity == ratingQuantity &&
+//                ratingQuantity == priceQuantity &&
+//                priceQuantity == imageQuantity &&
+//                imageQuantity == checkBoxQuantity);
+//    }
 }

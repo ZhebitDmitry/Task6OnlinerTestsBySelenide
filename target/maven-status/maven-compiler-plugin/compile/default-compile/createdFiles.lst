@@ -1,9 +1,0 @@
-Main.class
-com\it_academy\onliner\rest_api\models\Product.class
-com\it_academy\onliner\rest_api\utils\getRequestUtils.class
-com\it_academy\onliner\rest_api\service\SushiService.class
-com\it_academy\onliner\pageobject\onliner\CatalogPage.class
-com\it_academy\onliner\rest_api\endpoints\OnlinerEndpoints.class
-com\it_academy\onliner\pageobject\onliner\MainPage.class
-com\it_academy\onliner\pageobject\onliner\framework\PropertiesReader.class
-com\it_academy\onliner\pageobject\onliner\ProductsPage.class
