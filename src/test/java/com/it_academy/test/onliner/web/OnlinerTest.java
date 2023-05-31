@@ -70,7 +70,7 @@ public class OnlinerTest extends BaseTest {
     public void testMobilePhone() {
         LOG.info("Проверка наличия заголовков, описания, рейтингов, цен, иконок и чекбоксов у мобильных телефонов");
         ProductsPage mobilePhonesPage = new MainPage(BASE_URL).clickOnMobilePhones();
-//        mobilePhonesPage.getProductsList().shouldBe(Condition.visible);
+        mobilePhonesPage.getProductsList().shouldBe(Condition.visible);
         int productSectionQuantity = mobilePhonesPage.getProductSection().size();
         LOG.info("Количество продуктов - "+productSectionQuantity);
         int titlesQuantity = mobilePhonesPage.getTitlesOfProducts().size();
