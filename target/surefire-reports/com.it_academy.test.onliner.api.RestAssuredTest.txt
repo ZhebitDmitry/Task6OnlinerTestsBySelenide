@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.it_academy.test.onliner.api.RestAssuredTest
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.it_academy.test.onliner.api.RestAssuredTest

@@ -1,0 +1,3 @@
+com\it_academy\test\onliner\web\OnlinerTest.class
+com\it_academy\test\onliner\api\RestAssuredTest.class
+com\it_academy\test\onliner\web\BaseTest.class
