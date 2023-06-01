@@ -3,12 +3,13 @@ package com.it_academy.test.onliner.web;
 import com.it_academy.onliner.pageobject.onliner.CatalogPage;
 import com.it_academy.onliner.pageobject.onliner.MainPage;
 import com.it_academy.onliner.pageobject.onliner.ProductsPage;
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import junit.framework.Assert;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static com.codeborne.selenide.Condition.*;
 
 public class OnlinerTest extends BaseTest {
     protected static final Logger LOG = LoggerFactory.getLogger(OnlinerTest.class);
@@ -34,7 +35,7 @@ public class OnlinerTest extends BaseTest {
                 .clickOnCatalog()
                 .clickOnCatalogSectionComputersAndNetworksSection()
                 .getVerticalListOfComputersAndNetworks()
-                .shouldBe(Condition.visible);
+                .shouldBe(visible);
     }
 
     @Test
@@ -66,30 +67,30 @@ public class OnlinerTest extends BaseTest {
                 && computerComponentsSize == titlesOfComponentsSize);
     }
 
-//    @Test
-//    public void testMobilePhone() {
-//        LOG.info("Проверка наличия заголовков, описания, рейтингов, цен, иконок и чекбоксов у мобильных телефонов");
-//        ProductsPage mobilePhonesPage = new MainPage(BASE_URL).clickOnMobilePhones();
-//        mobilePhonesPage.getProductsList().shouldBe(Condition.visible);
-//        int productSectionQuantity = mobilePhonesPage.getProductSection().size();
-//        LOG.info("Количество продуктов - "+productSectionQuantity);
-//        int titlesQuantity = mobilePhonesPage.getTitlesOfProducts().size();
-//        LOG.info("Количество заголовков - "+titlesQuantity);
-//        int descriptionQuantity = mobilePhonesPage.getDescriptionOfProducts().size();
-//        LOG.info("Количество описаний - "+descriptionQuantity);
-//        int ratingQuantity = mobilePhonesPage.getRatingOfProducts().size();
-//        LOG.info("Количество рейтингов - "+ratingQuantity);
-//        int priceQuantity = mobilePhonesPage.getPricesOfProducts().size();
-//        LOG.info("Количество цен - "+priceQuantity);
-//        int imageQuantity = mobilePhonesPage.getProductPictures().size();
-//        LOG.info("Количество иконок - "+imageQuantity);
-//        int checkBoxQuantity = mobilePhonesPage.getProductCheckBox().size();
-//        LOG.info("Количество чекбоксов - "+checkBoxQuantity);
-//        Assert.assertTrue(productSectionQuantity == titlesQuantity &&
-//                titlesQuantity == descriptionQuantity &&
-//                descriptionQuantity == ratingQuantity &&
-//                ratingQuantity == priceQuantity &&
-//                priceQuantity == imageQuantity &&
-//                imageQuantity == checkBoxQuantity);
-//    }
+    @Test
+    public void testMobilePhone() {
+        LOG.info("Проверка наличия заголовков, описания, рейтингов, цен, иконок и чекбоксов у мобильных телефонов");
+        ProductsPage mobilePhonesPage = new MainPage(BASE_URL).clickOnMobilePhones();
+        mobilePhonesPage.getTitlesOfProducts().get(1).shouldBe(visible);
+        int productSectionQuantity = mobilePhonesPage.getProductSection().size();
+        LOG.info("Количество продуктов - "+productSectionQuantity);
+        int titlesQuantity = mobilePhonesPage.getTitlesOfProducts().size();
+        LOG.info("Количество заголовков - "+titlesQuantity);
+        int descriptionQuantity = mobilePhonesPage.getDescriptionOfProducts().size();
+        LOG.info("Количество описаний - "+descriptionQuantity);
+        int ratingQuantity = mobilePhonesPage.getRatingOfProducts().size();
+        LOG.info("Количество рейтингов - "+ratingQuantity);
+        int priceQuantity = mobilePhonesPage.getPricesOfProducts().size();
+        LOG.info("Количество цен - "+priceQuantity);
+        int imageQuantity = mobilePhonesPage.getProductPictures().size();
+        LOG.info("Количество иконок - "+imageQuantity);
+        int checkBoxQuantity = mobilePhonesPage.getProductCheckBox().size();
+        LOG.info("Количество чекбоксов - "+checkBoxQuantity);
+        Assert.assertTrue(productSectionQuantity == titlesQuantity &&
+                titlesQuantity == descriptionQuantity &&
+                descriptionQuantity == ratingQuantity &&
+                ratingQuantity == priceQuantity &&
+                priceQuantity == imageQuantity &&
+                imageQuantity == checkBoxQuantity);
+    }
 }

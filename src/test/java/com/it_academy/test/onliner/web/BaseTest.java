@@ -13,16 +13,12 @@ import org.junit.jupiter.api.BeforeAll;
 abstract public class BaseTest {
 
     public static void setUp() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-                .screenshots(true)
-                .savePageSource(true));
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
         Configuration.browserSize = "1920x1080";
         Configuration.headless = false;
     }
 
-//    @BeforeClass
     @BeforeAll
     public static void init() {
         setUp();
