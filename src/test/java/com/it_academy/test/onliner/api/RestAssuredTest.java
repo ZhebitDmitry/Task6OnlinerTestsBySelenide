@@ -29,7 +29,7 @@ public class RestAssuredTest {
     @Test
     public void checkContainsPrefixRoll() {
         List<String> prefixList = new SushiService().getNamePrefixWithFilter();
-        LOG.info("Все префиксы - "+prefixList);
+        LOG.info("Все префиксы - {}", prefixList);
         assertTrue(prefixList
                 .stream()
                 .allMatch(prefix -> prefix.contains("Роллы")));
