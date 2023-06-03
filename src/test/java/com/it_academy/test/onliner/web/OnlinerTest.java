@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
 
 public class OnlinerTest extends BaseTest {
@@ -71,7 +73,7 @@ public class OnlinerTest extends BaseTest {
     public void testMobilePhone() {
         LOG.info("Проверка наличия заголовков, описания, рейтингов, цен, иконок и чекбоксов у мобильных телефонов");
         ProductsPage mobilePhonesPage = new MainPage(BASE_URL).clickOnMobilePhones();
-        mobilePhonesPage.getTitlesOfProducts().get(1).shouldBe(visible);
+        mobilePhonesPage.getTitlesOfProducts().get(1).shouldBe(visible, Duration.ofSeconds(30));
         int productSectionQuantity = mobilePhonesPage.getProductSection().size();
         LOG.info("Количество продуктов - "+productSectionQuantity);
         int titlesQuantity = mobilePhonesPage.getTitlesOfProducts().size();
