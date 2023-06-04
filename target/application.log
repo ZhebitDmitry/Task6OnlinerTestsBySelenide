@@ -1,36 +1,35 @@
-2023-06-03 13:51:16,238 [main] INFO  com.it_academy.test.onliner.api.RestAssuredTest - Все префиксы - [Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы]
-2023-06-03 13:51:30,800 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Проверка наличия заголовков, описания, рейтингов, цен, иконок и чекбоксов у мобильных телефонов
-2023-06-03 13:51:30,997 [main] INFO  com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-2023-06-03 13:51:31,020 [main] INFO  com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Дмитрий\Documents\GitHub\Task6OnlinerTestsBySelenide\build\downloads\1685789491018_7304_1
-2023-06-03 13:51:31,932 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 114.0.5735.90 (resolved driver for Chrome 114)
-2023-06-03 13:51:31,951 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Дмитрий\.cache\selenium\chromedriver\win32\114.0.5735.90\chromedriver.exe
-2023-06-03 13:51:32,139 [main] INFO  com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
-2023-06-03 13:51:33,938 [main] INFO  com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
-2023-06-03 13:51:33,952 [main] INFO  com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
-2023-06-03 13:51:34,040 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=114.0.5735.91 Platform=WINDOWS
-2023-06-03 13:51:34,040 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.12.3
-2023-06-03 13:51:34,040 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.8.3 build revision: e5e76298c3
-2023-06-03 13:51:34,040 [main] INFO  com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on WINDOWS (8adf65079c8f05eee43796b813f2bbba)
-2023-06-03 13:51:34,044 [main] INFO  com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on WINDOWS (8adf65079c8f05eee43796b813f2bbba),proxy=null,downloadsFolder=C:\Users\Дмитрий\Documents\GitHub\Task6OnlinerTestsBySelenide\build\downloads\1685789491018_7304_1] in 1 [size=1]
-2023-06-03 13:51:34,044 [main] INFO  com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
-2023-06-03 13:51:38,900 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество продуктов - 30
-2023-06-03 13:51:38,924 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество заголовков - 30
-2023-06-03 13:51:38,956 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество описаний - 30
-2023-06-03 13:51:38,988 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество рейтингов - 30
-2023-06-03 13:51:39,015 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество цен - 30
-2023-06-03 13:51:39,040 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество иконок - 30
-2023-06-03 13:51:39,064 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество чекбоксов - 30
-2023-06-03 13:51:39,227 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Открыть секцию каталога "Компьютеры и сети". Убедиться, что появляется вертикальный список пунктовсекций
-2023-06-03 13:51:41,691 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Открыть раздел каталог, проверить присутствие секций "Электроника", "Компьютеры и сети","Бытовая техника", "На каждый день", "Стройка и ремонт","Дом и сад","Авто и мото","Красота и спорт","Детям и мамам".
-2023-06-03 13:51:43,604 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Открыть пункт "Комплектующие". Проверить, что в появившемся списке комплектующих ВСЕ элементы 
+2023-06-04 03:55:16,653 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Проверка наличия заголовков, описания, рейтингов, цен, иконок и чекбоксов у мобильных телефонов
+2023-06-04 03:55:16,876 [main] INFO  com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+2023-06-04 03:55:16,901 [main] INFO  com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Дмитрий\Documents\GitHub\Task6OnlinerTestsBySelenide\build\downloads\1685840116900_12176_1
+2023-06-04 03:55:17,457 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 114.0.5735.90 (resolved driver for Chrome 114)
+2023-06-04 03:55:17,489 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Дмитрий\.cache\selenium\chromedriver\win32\114.0.5735.90\chromedriver.exe
+2023-06-04 03:55:17,770 [main] INFO  com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+2023-06-04 03:55:20,297 [main] INFO  com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+2023-06-04 03:55:20,311 [main] INFO  com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+2023-06-04 03:55:20,417 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=114.0.5735.91 Platform=WINDOWS
+2023-06-04 03:55:20,418 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.12.3
+2023-06-04 03:55:20,418 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.8.3 build revision: e5e76298c3
+2023-06-04 03:55:20,418 [main] INFO  com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on WINDOWS (412fbc20941818b81ea80a14525eb59c)
+2023-06-04 03:55:20,425 [main] INFO  com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on WINDOWS (412fbc20941818b81ea80a14525eb59c),proxy=null,downloadsFolder=C:\Users\Дмитрий\Documents\GitHub\Task6OnlinerTestsBySelenide\build\downloads\1685840116900_12176_1] in 1 [size=1]
+2023-06-04 03:55:20,425 [main] INFO  com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+2023-06-04 03:55:28,383 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество продуктов - 30
+2023-06-04 03:55:28,422 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество заголовков - 30
+2023-06-04 03:55:28,463 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество описаний - 30
+2023-06-04 03:55:28,498 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество рейтингов - 30
+2023-06-04 03:55:28,530 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество цен - 30
+2023-06-04 03:55:28,560 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество иконок - 30
+2023-06-04 03:55:28,596 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество чекбоксов - 30
+2023-06-04 03:55:32,193 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Открыть секцию каталога "Компьютеры и сети". Убедиться, что появляется вертикальный список пунктовсекций
+2023-06-04 03:55:34,957 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Открыть раздел каталог, проверить присутствие секций "Электроника", "Компьютеры и сети","Бытовая техника", "На каждый день", "Стройка и ремонт","Дом и сад","Авто и мото","Красота и спорт","Детям и мамам".
+2023-06-04 03:55:36,810 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Открыть пункт "Комплектующие". Проверить, что в появившемся списке комплектующих ВСЕ элементы 
 содержат название, количество товаров и минимальную цену.
-2023-06-03 13:51:45,844 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество описаний - 15
-2023-06-03 13:51:45,878 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество заголовков - 15
-2023-06-03 13:51:45,905 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество компонетов - 15
-2023-06-03 13:51:45,920 [Thread-2] INFO  com.codeborne.selenide.drivercommands.DisposablesRegistry - Run cleanup: size=1
-2023-06-03 13:51:45,920 [Thread-2] INFO  com.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\Users\Дмитрий\Documents\GitHub\Task6OnlinerTestsBySelenide\build\downloads\1685789491018_7304_1
-2023-06-03 13:51:45,920 [Thread-2] INFO  com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 49 -> ChromeDriver: chrome on WINDOWS (8adf65079c8f05eee43796b813f2bbba)...
-2023-06-03 13:51:45,971 [AsyncHttpClient-1-4] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
+2023-06-04 03:55:39,255 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество описаний - 15
+2023-06-04 03:55:39,280 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество заголовков - 15
+2023-06-04 03:55:39,311 [main] INFO  com.it_academy.test.onliner.web.OnlinerTest - Количество компонетов - 15
+2023-06-04 03:55:39,326 [Thread-2] INFO  com.codeborne.selenide.drivercommands.DisposablesRegistry - Run cleanup: size=1
+2023-06-04 03:55:39,328 [Thread-2] INFO  com.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\Users\Дмитрий\Documents\GitHub\Task6OnlinerTestsBySelenide\build\downloads\1685840116900_12176_1
+2023-06-04 03:55:39,328 [Thread-2] INFO  com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 49 -> ChromeDriver: chrome on WINDOWS (412fbc20941818b81ea80a14525eb59c)...
+2023-06-04 03:55:39,373 [AsyncHttpClient-1-4] WARN  org.asynchttpclient.netty.handler.WebSocketHandler - onError
 java.net.SocketException: Connection reset
 	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
 	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
@@ -46,5 +45,6 @@ java.net.SocketException: Connection reset
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:1589)
-2023-06-03 13:51:46,132 [Thread-2] INFO  com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 49 in 212 ms
-2023-06-03 13:51:46,133 [Thread-2] INFO  com.codeborne.selenide.drivercommands.DisposablesRegistry - Finished cleanup
+2023-06-04 03:55:39,586 [Thread-2] INFO  com.codeborne.selenide.drivercommands.CloseDriverCommand - Closed webdriver 49 in 258 ms
+2023-06-04 03:55:39,587 [Thread-2] INFO  com.codeborne.selenide.drivercommands.DisposablesRegistry - Finished cleanup
+2023-06-04 03:56:15,608 [main] INFO  com.it_academy.test.onliner.api.RestAssuredTest - Все префиксы - [Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы, Роллы]

@@ -1,7 +1,10 @@
 package com.it_academy.onliner.pageobject.onliner;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+
+import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
@@ -43,22 +46,22 @@ public class CatalogPage {
     }
 
     public CatalogPage clickOnCatalogSectionComputersAndNetworksSection() {
-        computersAndNetworksSection.click();
+        computersAndNetworksSection.shouldBe(Condition.visible, Duration.ofSeconds(30)).click();
         return new CatalogPage();
     }
 
     public CatalogPage clickOnComputerComponentSection() {
-        computerComponentSection.click();
+        computerComponentSection.shouldBe(Condition.visible, Duration.ofSeconds(30)).click();
         return new CatalogPage();
     }
 
     public CatalogPage clickOnElectronics() {
-        electronicsSection.click();
+        electronicsSection.shouldBe(Condition.visible, Duration.ofSeconds(30)).click();
         return new CatalogPage();
     }
 
     public ProductsPage clickOnMobilePhones() {
-        mobilePhones.click();
+        mobilePhones.shouldBe(Condition.visible, Duration.ofSeconds(30)).click();
         return new ProductsPage();
     }
 

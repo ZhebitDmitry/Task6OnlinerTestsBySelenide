@@ -4,7 +4,7 @@ import com.it_academy.onliner.pageobject.onliner.CatalogPage;
 import com.it_academy.onliner.pageobject.onliner.MainPage;
 import com.it_academy.onliner.pageobject.onliner.ProductsPage;
 import com.codeborne.selenide.SelenideElement;
-import junit.framework.Assert;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class OnlinerTest extends BaseTest {
     protected static final Logger LOG = LoggerFactory.getLogger(OnlinerTest.class);
@@ -22,7 +23,7 @@ public class OnlinerTest extends BaseTest {
         LOG.info("Открыть раздел каталог, проверить присутствие секций \"Электроника\", \"Компьютеры и сети\"," +
                 "\"Бытовая техника\", \"На каждый день\", \"Стройка и ремонт\"," +
                 "\"Дом и сад\",\"Авто и мото\",\"Красота и спорт\",\"Детям и мамам\".");
-        Assert.assertTrue(new MainPage(BASE_URL)
+        assertTrue(new MainPage(BASE_URL)
                 .clickOnCatalog()
                 .getCatalogSections()
                 .stream()
@@ -65,7 +66,7 @@ public class OnlinerTest extends BaseTest {
         LOG.info("Количество компонетов - "+ computerComponentsSize);
 
 
-        Assert.assertTrue(computerComponentsSize == descriptionOfComponentsSize
+        assertTrue(computerComponentsSize == descriptionOfComponentsSize
                 && computerComponentsSize == titlesOfComponentsSize);
     }
 
@@ -88,11 +89,25 @@ public class OnlinerTest extends BaseTest {
         LOG.info("Количество иконок - "+imageQuantity);
         int checkBoxQuantity = mobilePhonesPage.getProductCheckBox().size();
         LOG.info("Количество чекбоксов - "+checkBoxQuantity);
-        Assert.assertTrue(productSectionQuantity == titlesQuantity &&
-                titlesQuantity == descriptionQuantity &&
-                descriptionQuantity == ratingQuantity &&
-                ratingQuantity == priceQuantity &&
-                priceQuantity == imageQuantity &&
-                imageQuantity == checkBoxQuantity);
+        SoftAssertions softAssertions = new SoftAssertions();
+        softAssertions.assertThat(productSectionQuantity).as("Не соответствие: количество продуктов - "
+                + productSectionQuantity + ", количество заголовков - "
+                + titlesQuantity).isEqualTo(titlesQuantity);
+        softAssertions.assertThat(productSectionQuantity).as("Не соответствие: количество продуктов - "
+                + productSectionQuantity + ", количество описаний - "
+                + descriptionQuantity).isEqualTo(descriptionQuantity);
+        softAssertions.assertThat(productSectionQuantity).as("Не соответствие: количество продуктов - "
+                + productSectionQuantity + ", количество рейтингов - "
+                + ratingQuantity).isEqualTo(ratingQuantity);
+        softAssertions.assertThat(productSectionQuantity).as("Не соответствие: количество продуктов - "
+                + productSectionQuantity + ", количесвто цен - "
+                + priceQuantity).isEqualTo(priceQuantity);
+        softAssertions.assertThat(productSectionQuantity).as("Не соответствие: количество продуктов - "
+                + productSectionQuantity + ", количество иконок - "
+                + imageQuantity).isEqualTo(imageQuantity);
+        softAssertions.assertThat(productSectionQuantity).as("Не соответствие: количесвто продуктов - "
+                + productSectionQuantity + ", количесвто чекбоксов - "
+                + checkBoxQuantity).isEqualTo(checkBoxQuantity);
+        softAssertions.assertAll();
     }
 }

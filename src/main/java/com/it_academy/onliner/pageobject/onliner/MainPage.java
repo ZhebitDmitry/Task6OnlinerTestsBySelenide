@@ -1,7 +1,10 @@
 package com.it_academy.onliner.pageobject.onliner;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+
+import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -16,12 +19,12 @@ public class MainPage {
     }
 
     public CatalogPage clickOnCatalog() {
-        catalogButton.click();
+        catalogButton.shouldBe(Condition.visible, Duration.ofSeconds(30)).click();
         return new CatalogPage();
     }
 
     public ProductsPage clickOnMobilePhones() {
-        mobilePhones.click();
+        mobilePhones.shouldBe(Condition.visible, Duration.ofSeconds(30)).click();
         return new ProductsPage();
     }
 }
